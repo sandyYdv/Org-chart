@@ -1,0 +1,41 @@
+// Backup of current tailwind.config.mjs
+export default {
+    content: ["./app/**/*.{ts,tsx}",
+        "./components/**/*.{ts,tsx}",],
+    theme: {
+        fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+        },
+        extend: {
+            colors: {
+                bg: {
+                    default: "#F7F7F7",
+                    card: "#FFFFFF",
+                },
+                border: {
+                    subtle: "#E2E8F0",
+                    strong: "#D0D3DD",
+                },
+                text: {
+                    primary: "#111827",
+                    secondary: "#6B7280",
+                    muted: "#9CA3AF",
+                    onPurple: "#FFFFFF",
+                },
+                brand: {
+                    primary: "#5B21FF",
+                    soft: "#F3E8FF",
+                },
+            },
+            borderRadius: {
+                lg: "16px",
+                full: "9999px",
+            },
+            boxShadow: {
+                card: "0 10px 40px rgba(15, 23, 42, 0.08)",
+                toolbar: "0 8px 24px rgba(15, 23, 42, 0.06)",
+            },
+        },
+    },
+    plugins: [],
+}

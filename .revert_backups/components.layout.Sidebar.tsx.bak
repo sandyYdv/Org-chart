@@ -1,0 +1,36 @@
+// Backup of current Sidebar.tsx before restoring SVG icons
+// If you need to restore this version, copy it back to components/layout/Sidebar.tsx
+
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+const items = [
+  { href: "/org-chart", icon: "🏠" },
+  { href: "#people", icon: "👥" },
+  { href: "#settings", icon: "⚙️" },
+];
+
+export function Sidebar() {
+  const pathname = usePathname();
+  return (
+    <nav className="flex flex-col items-center gap-4 py-4">
+      {items.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href === "#people" ? "/org-chart" : item.href}
+          className={clsx(
+            "flex h-10 w-10 items-center justify-center rounded-lg text-xl",
+            pathname === "/org-chart" && item.href === "/org-chart"
+              ? "bg-neutral-900 text-white"
+              : "text-neutral-500 hover:bg-neutral-100"
+          )}
+        >
+          {item.icon}
+        </Link>
+      ))}
+    </nav>
+  );
+}

@@ -137,18 +137,7 @@ export default function OrgChartScreen({
 
             {error && (
               <div className="flex items-center justify-center h-full">
-                <div className="bg-white rounded-lg border border-[#FEE2E2] p-6 max-w-md text-center">
-                  <p className="text-sm font-medium text-[#991B1B] mb-2">
-                    Failed to load org chart
-                  </p>
-                  <p className="text-xs text-[#7F1D1D] mb-4">{error}</p>
-                  <button
-                    onClick={() => window.location.reload()}
-                    className="px-4 py-2 rounded-lg bg-[#6366F1] text-white text-xs sm:text-sm font-medium hover:bg-[#4F46E5] transition-colors"
-                  >
-                    Try Again
-                  </button>
-                </div>
+                <p className="text-sm text-[#6B7280]">Search for employee</p>
               </div>
             )}
 
